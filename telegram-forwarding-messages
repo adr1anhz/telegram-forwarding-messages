@@ -2,7 +2,7 @@ import asyncio
 from telethon.sync import TelegramClient
 from telethon.tl.types import Message
 
-# Replace these with your own values
+# api id/hash you can use public one or your own generated through official telegram website
 api_id = '000000000'
 api_hash = 'b894358989fdg9a9as'
 phone_number = '+00000000'
@@ -16,7 +16,6 @@ async def copy_messages(source_group_id, destination_group_id):
                 await client.send_message(destination_group_id, message_text)
                 await asyncio.sleep(45) #Delay between messages (45 seconds you can change it as you want)
 
-# Run the message copying
 if __name__ == "__main__":
     source_group_id = -0430430430  # ID of the group you want to forward from
     destination_group_id = -1002091771331  # ID of the group you want to forward to
