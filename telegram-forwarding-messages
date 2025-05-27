@@ -10,7 +10,6 @@ phone_number = '+00000000'
 async def copy_messages(source_group_id, destination_group_id):
     async with TelegramClient(None, api_id, api_hash) as client:  
         async for message in client.iter_messages(source_group_id):  
-            # Extract the text of the message
             if isinstance(message, Message):
                 message_text = message.text
                 await client.send_message(destination_group_id, message_text)
